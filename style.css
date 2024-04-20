@@ -1,0 +1,13 @@
+header{
+background-image: url('images/kkw.jpg');
+
+
+height: 100vh;
+
+background-size: cover;
+
+background-position: center;
+
+min-height: 100px;
+
+}

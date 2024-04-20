@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        my first website
+    </title>
+    <link rel="stylesheet" href="stylenew.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="main">
+            <ul>
+                <li>
+                    <select 
+                    onchange="window.location.href=this.value;">
+                        <option value=""> Login</option>  
+                        <option value="http://127.0.0.1:5500/pass.html">Teacher Login</a></option>
+                    <option value="http://127.0.0.1:5500/slogin.html">Student Login</a></option>
+            
+                  </select></li>
+                <li class="active"><a href="#">Home</a></li>
+
+                <li class="active"><a href="#webb">About us</a></li>
+
+                
+
+
+                <li class="active"><a href="#cont">Contact info</a></li>
+
+            </ul>
+        </div>
+        <img src="images/logo.png">
+    </header>
+    <hr>
+    <section id="webb">
+        <iframe
+        src="http://127.0.0.1:5500/about.html" width="1200" height="750" frameborder="0" marginheight="0" marginwidth="0" id="cont">Loading…
+        
+    </iframe>
+    </section>
+    <hr>
+    <footer>
+    <iframe id ="cont"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeTnyspd8QQ9us7ulVRPlyZnrrlZQuJlUElCJpR8tuNPzEJiw/viewform?embedded=true"
+        width="1200" height="954" frameborder="0" marginheight="0" marginwidth="0" id="cont">Loading…</iframe>
+    </footer> 
+    <script src="
+                 https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+           "></script>
+    <script>
+        $(document).ready(function () {
+            console.log("loaded")
+        })
+    </script>
+</body>
+
+</html>

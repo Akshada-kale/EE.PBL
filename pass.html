@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            background-image:url(sunset.jpg);
+            background-size: cover;
+
+        }
+        .container {
+            border: 2px solid black;
+            border-radius: 8px;
+            width: 400px;
+            height: 280px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            left: 400px;
+            top: 100px;
+            
+
+        }
+
+        .button1 {
+            padding: 5px;
+            position: relative;
+            left: 10px;
+            background-color: palegreen;
+        }
+
+        .button1:hover {
+            border: 2px solid red;
+        }
+
+        #button2 {
+            position: relative;
+            top: 20px;
+            left: 160px;
+        }
+
+        .container form {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h3>Teacher Log in</h3>
+            Username:<input type="text" name="username" placeholder="Teacher id" id="u1" required><br>
+            <br>
+            Password:<input type="password" name="password" placeholder="password" id="u2" required><br>
+            <br>
+            <input type="button" value="Log in" class="button1">
+            <button id="button2" style="display: none;"><a href="http://127.0.0.1:5500/tcontainer.html">Access Granted</a></button>
+        </form>
+    </div>
+    <script>
+        const username = document.getElementById("u1")
+        const password = document.getElementById("u2")
+        const button1 = document.querySelector(".button1")
+        button1.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (username.value == "Shweta_jadhav" && password.value == "12345") {
+                document.getElementById("button2").style.display = "block"
+            }
+            else if (username.value == "groupmember" && password.value == "student") {
+                document.getElementById("button2").style.display = "block"
+            }
+            else {
+                alert(" Wrong Credentials")
+            }
+
+        })
+        /* line 51 la jithe access granted chi href blank ahe na tithe tujhi link de jyala tula 
+         connect karaychi asel tyachi
+         ani background images tula ji vatti ti thev ani styling dyaychi asel tr deun tak
+         
+
+         ani samaj jr tu back ground image changli takli ahe log in che textarea asta bgh te white asta te jr kadhayche asle tr 
+         tithe style add kr inputs la ki 
+         outline:none;
+         border:none;
+         background:transparent;
+         border-bottom:2px solid black
+         he takl ki sagl transpoarent disel ani student id chya khali fakt ek 
+         bottom border rahil 
+
+
+
+
+         background chi image ashich takli ahe so tu changli takun ghe
+         */
+    </script>
+
+</body>
+
+</html>

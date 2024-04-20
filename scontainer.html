@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Teachers</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: peachpuff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color:palevioletred;
+            border: none;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .box:hover {
+            background-color: lightgreen;
+        }
+
+        .teacher-list {
+            display: none;
+        }
+
+        .teacher-list.active {
+            display: block;
+        }
+
+        .icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="subject1">
+            <span class="icon">📐</span>
+            <h2>Engineering Exploration </h2>
+            <div class="teacher-list">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/smsg.html">Shweta Jadhav</a></li>
+                    <li>Priya Rakibe</li>
+                    <li>Samiksha Tiwari</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="box" id="subject2">
+            <span class="icon">🔬</span>
+            <h2>Applied Physics</h2>
+            <div class="teacher-list">
+                <ul>
+                    <li>Shital Sonawane</li>
+                    <li>Dynaneshwari Patil</li>
+                    <li>Monali Kshrirasagar</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="box" id="subject3">
+            <span class="icon">📚</span>
+            <h2>Python</h2>
+            <div class="teacher-list">
+                <ul>
+                    <li>Snehal Kamalapur</li>
+                    <li>Priti Vaidya</li>
+                    <li>Priyadarshani</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const boxes = document.querySelectorAll(".box");
+
+            boxes.forEach(box => {
+                box.addEventListener("click", function() {
+                    boxes.forEach(b => {
+                        if (b !== box) {
+                            b.querySelector(".teacher-list").classList.remove("active");
+                        }
+                    });
+                    box.querySelector(".teacher-list").classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
